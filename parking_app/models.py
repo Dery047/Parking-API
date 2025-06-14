@@ -12,7 +12,7 @@ class VehicleRecord(models.Model):
         if self.entry_time and self.exit_time:
             duration = self.exit_time - self.entry_time
             hours = duration.total_seconds() / 3600
-            hourly_rate = Decimal("5.00")  # Adjust this rate as needed
+            hourly_rate = Decimal("5.00")  
             return round(Decimal(hours) * hourly_rate, 2)
         return None
 
