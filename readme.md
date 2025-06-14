@@ -23,7 +23,7 @@ A simple backend API for managing vehicle entries and exits in a parking lot, bu
 
 ---
 
-## nstallation & Setup if you want to run the file in your own device
+## Installation & Setup if you want to run the file in your own device
  
 
  >  This project is part of my backend portfolio. Feel free to clone and run it locally! Here are the instructions to run it in your machine. 
