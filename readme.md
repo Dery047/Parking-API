@@ -14,6 +14,14 @@ A simple backend API for managing vehicle entries and exits in a parking lot, bu
 
 ---
 GET http://localhost:8000/api/vehicle-records/ route to test the API.
+| Method | Route                        | Description                                |
+| ------ | ---------------------------- | ------------------------------------------ |
+| GET    | `/api/vehicle-records/`      | Retrieve all vehicle records               |
+| POST   | `/api/vehicle-records/`      | Create a new vehicle record                |
+| GET    | `/api/vehicle-records/{id}/` | Retrieve a specific vehicle record by ID   |
+| PUT    | `/api/vehicle-records/{id}/` | Fully update a specific vehicle record     |
+| PATCH  | `/api/vehicle-records/{id}/` | Partially update a specific vehicle record |
+| DELETE | `/api/vehicle-records/{id}/` | Delete a specific vehicle record           |
 
 ## Tech Stack
 
