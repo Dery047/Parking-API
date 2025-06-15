@@ -1,12 +1,11 @@
 from rest_framework import serializers
 from .models import VehicleRecord
 
-
 class VehicleRecordSerializer(serializers.ModelSerializer):
     class Meta:
         model = VehicleRecord
         fields = '__all__'
-        read_only_fields = ['total_to_pay']  # 👈 Que no sea editable manualmente
+        read_only_fields = ['total_charge']  
 
     def validate(self, data):
         entry = data.get('entry_time')
@@ -24,9 +23,9 @@ class VehicleRecordSerializer(serializers.ModelSerializer):
         if entry and exit_:
             duration = exit_ - entry
             hours = duration.total_seconds() / 3600
-            validated_data['total_to_pay'] = round(hours * 2, 2)  # 👈 Ej: $2 por hora
+            validated_data['total_charge'] = round(hours * 2, 2)  
         else:
-            validated_data['total_to_pay'] = None
+            validated_data['total_charge'] = None
 
         return super().create(validated_data)
 
@@ -38,8 +37,7 @@ class VehicleRecordSerializer(serializers.ModelSerializer):
         if instance.entry_time and instance.exit_time:
             duration = instance.exit_time - instance.entry_time
             hours = duration.total_seconds() / 3600
-            instance.total_to_pay = round(hours * 2, 2)  # 👈 misma lógica
+            instance.total_charge = round(hours * 2, 2)  
 
         instance.save()
         return instance
-    

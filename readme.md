@@ -13,6 +13,7 @@ A simple backend API for managing vehicle entries and exits in a parking lot, bu
 - Admin panel for data management (optional)
 
 ---
+GET http://localhost:8000/api/vehicle-records/ route to test the API.
 
 ## Tech Stack
 
