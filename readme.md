@@ -1,4 +1,3 @@
-Claro, aquí te dejo el README para tu API de Parking Management en inglés y español, todo en markdown y bien organizado:
 
 ````markdown
 # Parking Management API (Django REST Framework)
