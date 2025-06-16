@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'parking_app',  # 👈 ESTA línea es obligatoria
+    'parking_app',  
 
 ]
 
