@@ -1,5 +1,5 @@
 
-````markdown
+
 # Parking Management API (Django REST Framework)
 
 A simple backend API for managing vehicle entries and exits in a parking lot, built using Django and Django REST Framework. The API automatically calculates the amount to pay based on the time a vehicle remains in the parking lot. (The base price per hour is set at $2 USD)
